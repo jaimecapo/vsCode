@@ -1,0 +1,33 @@
+¡
+.gallery-staff-16-3 .gallery-staff-16-3-header {
+    padding: 2em;
+}
+
+.gallery-staff-16-3 .gallery-staff-16-3-gallery .gallery-staff-16-photo{
+    padding: 1em;
+    text-align: center;
+}
+.gallery-staff-16-3 .gallery-staff-16-3-gallery .gallery-staff-16-photo img{
+    height: 100%;
+
+    transition: transform 1s;
+
+
+}
+
+.gallery-staff-16-3 .gallery-staff-16-3-gallery .gallery-staff-16-photo a p{
+    font-size: 14px; 
+    color:#646464; 
+    padding-top: 10px;
+}
+
+.gallery-staff-16-3 .gallery-staff-16-3-gallery .gallery-staff-16-photo a div{
+    height: 400px;
+
+    overflow: hidden; 
+    width: fit-content; 
+    margin: auto;
+}
+.gallery-staff-16-3 .gallery-staff-16-3-gallery .gallery-staff-16-photo:hover img{
+    transform: scale(1.3);
+}

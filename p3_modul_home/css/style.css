@@ -1,0 +1,49 @@
+html, body{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/fondo-bodas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    
+}
+.home-btn{
+    background-image: url(../img/boton-negro.png);
+
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:85% 85%;
+    border-radius: 50%;
+
+    border: 5px solid rgb(0, 0, 0);
+    text-align: center;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3), 10px 16px 10px 0 rgba(0, 0, 0, 0.3);
+    animation: respiration 2s ease infinite;
+}
+
+@keyframes respiration {
+    0%{
+        box-shadow: 00px 0px 10px 10px rgba(0, 0, 0, 0.2);
+        border: 5px solid rgb(54, 54, 54);
+
+    }
+    50%{
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.8);
+        border: 5px solid rgb(0, 0, 0);
+
+    }
+    100%{
+        box-shadow:0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+        border: 5px solid rgb(54, 54, 54);
+ 
+    }
+}

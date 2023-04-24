@@ -1,0 +1,102 @@
+:root{
+    --bg-green:rgb(129, 230, 83);
+    --btn-height:50px;
+    --btn-width:60px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div{
+    width: 60px;
+    height: 50px;
+    background-color: rgb(73, 82, 95);
+    position: relative; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+div .success{
+    background-color: var(--bg-green);
+    width: 200px;
+    height: 200px;
+    border-radius: 1em;
+    transform: rotate(45deg);
+    position: absolute;
+    left: -70px;
+    top: -250px;
+}
+div .download{
+    background-color: none;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
+}
+
+div .check{
+    background-color: var(--bg-green);
+    position: absolute;
+    top: -50px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
+
+}
+
+.active > .download{
+    background-color: none;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
+    animation: download_btn 1s ease 1 0.3s forwards;
+
+}
+
+.active > .check{
+    background-color: var(--bg-green);
+    position: absolute;
+    top: -50px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center;
+    animation: download_check 1s ease 1 1.5s forwards;
+}
+
+.active > .success{
+    background-color: var(--bg-green);
+    width: 200px;
+    height: 200px;
+    border-radius: 1em;
+    transform: rotate(45deg);
+    position: absolute;
+    left: -70px;
+    top: -250px;
+    animation: download_bar 3s ease 1 forwards ;
+}
+
+@keyframes download_bar {
+    0%{
+        left: -70px;
+        top: -250px;
+    }
+    100%{left:-70px; top: -130px;}
+}
+
+@keyframes download_btn {
+    0%{
+        top: 0px;
+    }
+    100%{top: 50px;}
+}
+
+@keyframes download_check {
+    0%{
+        top: -45px;
+    }
+    100%{top: 0px;}
+}

@@ -1,0 +1,40 @@
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin:3em auto auto auto;
+    height: 700px;
+    justify-content: center;
+}
+.gallery div{
+    flex: 2;
+    background-position-x: center;
+    background-size: auto 100%;
+    background-position-x: center;
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.gallery div .desc{
+    display: none;
+}
+
+.gallery:hover > div {
+    flex: 1;
+}
+.gallery:hover > div .desc{
+    display: none;
+
+}
+
+.gallery div:hover{
+    flex:5;
+}
+.gallery div:hover .desc{
+   display: block;
+   width: 90%;
+   padding: 1em;
+   background-color: rgba(0, 0, 0, 0.384);
+   color: white;
+   margin: 3em auto auto 3em;
+}

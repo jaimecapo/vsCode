@@ -1,0 +1,73 @@
+.gallery-carousel-15{
+    position:relative; 
+    overflow: hidden;
+    height: 520px;
+}
+
+.gallery-carousel-15 #gallery-carousel_element_btnLeft-15{
+    position: absolute;
+    left: calc(20px);
+    top: calc((100% / 2 ) - 40px );
+    
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+
+.gallery-carousel-15 .gallery-carousel_counter-15{
+    position: absolute;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: white;
+    bottom: 15px;
+    padding: 0px 15px 0px 15px;
+    left: 25px;
+    border-radius: 1em;
+    background-color: rgba(128, 128, 128, 0.281);
+}
+.gallery-carousel-15 #gallery-carousel_element_btnLeft-15 >div{
+    font-size: 110px;
+    margin-top: -60px;
+    margin-left: -5px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+.gallery-carousel-15 #gallery-carousel_element_btnRight-15{
+    position: absolute;
+    right: calc(20px);
+    top: calc((100% / 2 ) - 40px );
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+}
+.gallery-carousel-15 #gallery-carousel_element_btnRight-15 >div{
+    font-size: 110px;
+    margin-top: -60px;
+    margin-right: -5px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.gallery-carousel-15 .gallery-carousel_content-15{
+    position:absolute;
+    height: 500px;
+    display: flex;
+    flex-flow: row nowrap;
+    transition: left 1s ease;
+    left: 0px;
+
+}
+.gallery-carousel-15 .gallery-carousel_element-15 img{
+    height: 100%;
+    margin: 1em;
+}
