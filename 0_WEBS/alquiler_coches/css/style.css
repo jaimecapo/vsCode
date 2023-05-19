@@ -1,178 +1,104 @@
-.header > div{
-    background-image: linear-gradient(rgb(0, 110, 255),rgba(255, 255, 255, 0));
+:root{
+    --bg-dark:rgb(38, 39, 58);
 }
 .header{
-    background-image: url(../img/death-valley.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.header .header-content{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-position: center;
-}
-.header .header-content >div{
-    align-items: center;
-    display: flex;
-    height: 30vh;
-}
-.header .header-content >h1{
-    display: flex;
-    color: white;
-    font-size: 70px;
-}
-.header .header-content >div div{
-    width: 70px;
-    height: 70px;
-    margin: 1em;
-    border-radius: 50%;
-    background-color: white;
-}
-.calendar{
-    display: flex;
-    flex-flow: column wrap;
     justify-content: center;
-    margin: 5em 0 5em 0;
-}
-
-.calendar table{
-    width: 100%;
-}
-.calendar table td,th{
-    width:calc(100%/7);
-    height: 150px;
-}
-
-.calendar table th{
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    background-color: rgb(0, 110, 255);
-    height: 60px;
-}
-
-.calendar .inputs{
-    width: 100% ;     
-
-    display: flex;
-    gap: 10%;
-}
-
-.calendar .inputs > input{
-    flex: 1;
-    height:4em;
-    margin: 2em 0 2em 0;
-    font-size: 20px;
-}
-.place {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color:var(--bg-dark);
     color: white;
 }
-.place > div:nth-child(1){
-    flex: 3;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 400px;
-    margin-right: 3em;
-}
-.place > div:nth-child(2){
-    flex: 2;
-    background-color: rgb(0, 94, 218);
-    padding:  2em;
-
-}
-.place > div:nth-child(2){
-    margin: 1em;
-    
-}
-.place > div:nth-child(2) label{
-    font-size: 20px;
-    margin: 1em;
-}
-.place > div:nth-child(2) input{
-    height:5em;
-}
-.place > div:nth-child(2) div{
+.header-content{
+    margin: 3em;
     display: flex;
     gap: 1em;
-    align-items: center;
-    margin: 1em;
+    justify-content: space-between;
 }
-
-.place > div:nth-child(2) input[type="checkbox"]{
-    width: 30px;    
-}
-
-.place-bg{
-    margin: 5em 0 5em 0;
-    padding: 3em;
-    background-color: rgb(0, 110, 255);
-}
-
-.car-select > div {
-    background-color: rgb(255, 208, 0);
-    box-shadow: 10px 10px 5px rgba(65, 65, 65, 0.315);
-
-    height: 10vh;
-
+.header-content :nth-child(1){
     display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    gap: 1em;
+    align-items:  center;
 }
 
-.car-select > div h2{
-    color: white;
+.header-content :nth-child(1) h1{
     font-size: 70px;
 }
-
-.car-header{
-    background-color: rgba(87, 87, 87, 0.336);    
-    padding: 1em;
-    color: rgb(255, 255, 255);
-    margin-top: 5em;
-}
-.car{
+.summary{
+    background-image: url(../img/prague-7171444_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    height: 400px;
+    justify-content: center;
+    height: 60rem;
+    padding-top:3em ;
     align-items: center;
-    margin: 4em;
 }
-
-.car > div:nth-child(1) img{
-    width: 30px;
+.summary > div{
+    backdrop-filter: blur(4px);
+    margin: 3em;    
+    border: 10px solid orange;
 }
-.car > div:nth-child(1) div{
-    width: 100%;
-    display: flex;
-    gap: 4em;
-    justify-content: center;
-}
-.car > div:nth-child(1) > p{
-    width: 100%;
-    text-align: center;
-}
-.car > div:nth-child(1) {
-    flex: 2;
-    background-color: rgb(0, 110, 255);
-    padding:  2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    gap: 2em;
-    font-size: 25px;
+.summary .date{
+    border-radius: 2em;
     color: white;
-    box-shadow: 10px 10px 10px rgba(0, 37, 94, 0.596);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1em;
 }
 
-.car > div:nth-child(2){
-    flex: 3;
-    width: 100%;
-    height: 400px;
-    background-size: 100% auto;
-    box-shadow: 10px 10px 10px rgba(0, 37, 94, 0.596);
+.summary .date :nth-child(even){
+    font-size: 70px;
+}
+.summary .date :nth-child(odd){
+    font-size: 40px;
+}
+.summary .vehicle{
+    font-size: 40px;
+    border-radius: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+
+    gap: 1em;
+}
+.summary .desc{
+    font-size: 35px;
+    border-radius: 2em;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.calendar {
+    margin: 3em;
+    display: flex;
+    justify-content: center;
+}
+.calendar .days{
+    border-collapse: 	collapse;
+    border: 5px solid orange;
+    border-radius: 1em;
+}
+.calendar .days th,td{
+    width: calc(100% / 7);
+    height: 140px;
+    
+}
+.calendar .days th{
+    height: 70px;
+        border-left: 5px solid orange;
+    border-right: 5px solid orange;
+}
+.calendar .days td{
+    border-top: 5px solid orange;
+    border-left: 5px solid orange;
+    border-right: 5px solid orange;
+
+    height: 70px;
 }

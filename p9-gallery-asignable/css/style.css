@@ -1,0 +1,26 @@
+.gallery_staff_18_header h2 {
+    font-size: 40px;
+}
+
+.gallery_staff_18_header h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color:gray;
+    margin-bottom: 50px;
+}
+.gallery-content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    resize: both;
+
+}
+
+.gallery-content > div {
+    padding: 1em;
+}
+
+.gallery-content > div img{
+    height: 600px;
+}

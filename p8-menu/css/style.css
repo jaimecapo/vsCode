@@ -1,0 +1,45 @@
+.menu{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    color: grey;
+}
+.menu > div{
+    font:50px;
+    display: flex;
+    gap: 4em;
+    margin-left: 2em;
+}
+.proyecto-list{
+    position: absolute;
+    top: 30px;
+    display: none;
+    gap: 4em;
+
+}
+
+.proyecto{
+    position: relative;
+}
+
+.proyecto > {
+    display: 1;
+}
+.menu a{
+    color: grey;
+}
+.menu a:hover{
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+.proyecto-list{
+
+}
+.proyecto-btn:hover + .proyecto-list{
+    display: flex;    
+    opacity: 0;
+    transition: opacity 1s;
+    opacity: 1 !important;
+}

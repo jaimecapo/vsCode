@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./pexels-dids-3794359.jpg" height="1000" alt="" />
+    <img src="./pexels-karolina-grabowska-4386395.jpg" height="300" alt="" />
+    <img src="./pexels-karolina-grabowska-4386404.jpg" height="800" alt="" />
+    <img src="./pexels-dids-3794359.jpg" height="1000" alt="" />
+    <img src="./pexels-karolina-grabowska-4386395.jpg" height="300" alt="" />
+    <img src="./pexels-karolina-grabowska-4386404.jpg" height="800" alt="" />
+    <img src="./pexels-dids-3794359.jpg" height="1000" alt="" />
+    <img src="./pexels-karolina-grabowska-4386395.jpg" height="300" alt="" />
+    <img src="./pexels-karolina-grabowska-4386404.jpg" height="800" alt="" />
+    <img src="./pexels-dids-3794359.jpg" height="1000" alt="" />
+    <img src="./pexels-karolina-grabowska-4386395.jpg" height="300" alt="" />
+    <img src="./pexels-karolina-grabowska-4386404.jpg" height="800" alt="" />
+
+    <script>
+      const images = document.querySelectorAll("img");
+      const positions = Array.from(images).map((image) => image.offsetTop);
+      console.log(positions);
+    
+      let canScroll = true; 
+      let scrolling = false; 
+      const cooldownTime = 200;
+      let lastScrollTime = Date.now(); 
+    
+      function scrollToPosition(position) {
+        scrolling = true;
+        window.scrollTo({
+          top: position,
+          behavior: "smooth"
+        });
+    
+        setTimeout(function () {
+          canScroll = true;
+          scrolling = false;
+        }, cooldownTime);
+      }
+    
+      document.addEventListener(
+        "wheel",
+        function (e) {
+          e.preventDefault();
+          const now = Date.now();
+          const delta = now - lastScrollTime;
+          lastScrollTime = now;
+    
+          if (!canScroll || scrolling || delta < cooldownTime) {
+            return;
+          }
+    
+          canScroll = false;
+    
+          const currentY = window.scrollY;
+          const direction = Math.sign(e.deltaY);
+          let nextPosition;
+    
+          if (direction > 0) {
+            const nextPositions = positions.filter((position) => position > currentY);
+            nextPosition = nextPositions.length > 0 ? Math.min(...nextPositions) : positions[positions.length - 1];
+          } else if (direction < 0) {
+            const prevPositions = positions.filter((position) => position < currentY);
+            nextPosition = prevPositions.length > 0 ? Math.max(...prevPositions) : 0;
+          }
+    
+          if (nextPosition !== undefined) {
+            scrollToPosition(nextPosition);
+          }
+        },
+        { passive: false }
+      );
+    </script>
+
+
+  </body>
+</html>

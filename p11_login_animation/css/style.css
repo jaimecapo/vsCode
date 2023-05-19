@@ -1,0 +1,221 @@
+body, html{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-animatedlogin-bg-objects:#F25C05;
+    --color-animatedlogin-bg:#cc4b00;
+    --color-animatedlogin-bg-rightscreen:#F28705;
+    --color-animatedlogin-bg-righttext1:rgb(255, 255, 255) ;
+    --color-animatedlogin-bg-righttext2:#fff0de ;
+    --color-animatedlogin-bg-leftscreen:rgb(255, 255, 255) ;
+    --color-animatedlogin-bg-lefttext1:#F28705 ;
+    --color-animatedlogin-bg-lefttext2:#f3a74a ;
+    --img-animatedlogin-width:140px;
+}
+
+/*/////////////////*/
+/*Fondo y escenario*/
+.login-animated-screen{
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    left: -20px;
+    top: -20px;
+    bottom: 0;
+    width: calc(100% + 20px);
+    height: 100vh;
+    display: flex;
+    overflow:hidden;
+}
+.login-animated-screen .login-animated-screen-bg{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    animation: fondo 1.5s ease 2.5s forwards;
+}
+
+/*/////////////////////////////////////*/
+/*Pantalla derecha del log de animación*/
+
+.login-animated-screen .login-animated-screen-rightscreen{
+    flex:1;
+    position: relative; 
+    background-color: var(--color-animatedlogin-bg-rightscreen);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rightscreen_animation 2s cubic-bezier(0.64, 0.02, 0.32, 1) 2.5s forwards;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.3),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.login-animated-screen .login-animated-screen-rightscreen img{
+    position: absolute;
+    top: calc(100% / 2 - 90 );
+    left: -90px;
+    width: 180px;
+    height: auto;
+}
+
+.login-animated-screen .login-animated-screen-rightscreen-bar{
+    position: absolute;
+    top: calc(100% / 2 - 100px);
+    left: -5px;
+    width: 10px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: var(--color-animatedlogin-bg-objects);
+    animation: bar_animation 1.5s ease 1s forwards;
+}
+
+.login-animated-screen .login-animated-screen-rightscreen-userimg_bg{
+    position: absolute;
+    top: calc(100% / 2 - 105px);
+    left: -105px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: var(--color-animatedlogin-bg-objects);
+
+}
+
+.login-animated-screen .login-animated-screen-rightscreen h3{
+    margin-left: 110px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-animatedlogin-bg-righttext1);
+
+}
+.login-animated-screen .login-animated-screen-rightscreen h4{
+    margin-left: 110px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-animatedlogin-bg-righttext2);
+}
+
+/*///////////////////////////////////////*/
+/*Pantalla izquierda del log de animación*/
+
+.login-animated-screen .login-animated-screen-leftscreen-bar{
+    position: absolute;
+    top: calc(100% / 2 - 100px);
+    right: -5px;
+    width: 10px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: var(--color-animatedlogin-bg-objects);
+    animation: bar_animation 1.5s ease 1s forwards;
+}
+
+.login-animated-screen .login-animated-screen-leftscreen{
+    background-color: var(--color-animatedlogin-bg-leftscreen);
+
+    position: relative;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: leftscreen_animation 2s cubic-bezier(0.64, 0.02, 0.32, 1) 2.5s forwards;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.0),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+}
+
+.login-animated-screen .login-animated-screen-leftscreen h3{
+    margin-right: 110px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-animatedlogin-bg-lefttext1);
+
+}
+.login-animated-screen .login-animated-screen-leftscreen h4{
+    margin-right: 110px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-animatedlogin-bg-lefttext2);
+}
+
+.login-animated-screen .login-animated-screen-leftscreen-userimg_bg{
+    position: absolute;
+    top: calc(100% / 2 - 105px);
+    right: -105px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: var(--color-animatedlogin-bg-objects);
+
+}
+
+
+/*/////////////*/
+/* animaciones */
+
+@keyframes fondo {
+    0%{
+        background-color: var(--color-animatedlogin-bg);
+        filter: opacity(0.8);
+
+    }
+    25%{
+        background-color: var(--color-animatedlogin-bg);
+        filter: opacity(0.6);
+
+    }
+    50%{
+        background-color: var(--color-animatedlogin-bg);
+        filter: opacity(0.4);
+    }
+    75%{
+        background-color: var(--color-animatedlogin-bg);
+        filter: opacity(0.1);    
+    }
+    100%{
+        background-color: var(--color-animatedlogin-bg);
+        filter: opacity(0);
+        display: none;
+    } 
+}
+
+@keyframes bar_animation {
+    0%{
+        height: 200px;
+        top: calc(100% / 2 - 100px);
+    }
+    100%{
+        height: 100%;
+        top: 0px;
+    }
+}
+@keyframes leftscreen_animation {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -70%;
+        visibility: hidden;
+    }
+}
+@keyframes rightscreen_animation {
+    0%{
+        right: 0;
+    }
+    100%{
+        right: -70%;
+        display: none;
+        visibility: hidden;
+
+    }
+}
+
