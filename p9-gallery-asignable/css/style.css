@@ -1,26 +1,91 @@
-.gallery_staff_18_header h2 {
-    font-size: 40px;
+
+/****************************************************************************/
+/* Galería de imágenes 'gallery-photos-03' */
+/****************************************************************************/
+
+.gallery-photos-03 .gallery-photos-03-header {
+	margin-top: 3em;
 }
 
-.gallery_staff_18_header h3 {
-    font-size: 18px;
-    text-transform: uppercase;
-    color:gray;
-    margin-bottom: 50px;
-}
-.gallery-content{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
-    resize: both;
+	.gallery-photos-03 .gallery-photos-03-header h2 {
+		font-size: 40px;
+	}
 
-}
+	.gallery-photos-03 .gallery-photos-03-header h3 {
+		font-size: 18px;
+		text-transform: uppercase;
+		color: var(--color-dark-gray);
+		margin-bottom: 50px;
+	}
 
-.gallery-content > div {
-    padding: 1em;
+.gallery-photos-03 .gallery-photos-03-item {
+	/*align-self: stretch;*/
 }
 
-.gallery-content > div img{
-    height: 600px;
+.gallery-photos-03 .gallery-photos-03-content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
 }
+
+	.gallery-photos-03 .gallery-photos-03-content:after {
+		content: "";
+		flex: auto;
+	}
+
+	.gallery-photos-03 .gallery-photos-03-content a div {
+		padding: 0.5em;
+	}
+
+		.gallery-photos-03 .gallery-photos-03-content a div img {
+			text-align:center;
+			padding: 0 1em;
+            height: 500px;
+		}
+
+	.gallery-photos-03 .gallery-photos-03-content a {
+		text-decoration: none;
+		text-align: center;
+	}
+	.gallery-photos-03 .gallery-photos-03-content a p {
+		height:max-content;
+		overflow:visible;
+        
+	}
+
+	.gallery-photos-03 .gallery-photos-03-content > div:hover a p {
+		text-decoration: none;
+		visibility: visible;
+		color: var(--color-medium-gray);
+	}
+
+	.gallery-photos-03 .gallery-photos-03-content a p {
+		visibility: hidden;
+		font-size: 14px;
+	}
+
+@media (max-width: 767px) {
+	.gallery-photos-03 .gallery-photos-03-content a p {
+		visibility: visible;
+		color: var(--color-medium-gray);
+	}
+}
+
+/*@media (min-width: 768px) and (max-width: 992px) {
+	.gallery-photos-03 .gallery-photos-03-content a div img {
+		height: 300px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+	.gallery-photos-03 .gallery-photos-03-content a div img {
+		height: 400px;
+	}
+}
+
+@media (min-width: 1800px) {
+	.gallery-photos-03 .gallery-photos-03-content a div img {
+		height: 500px;
+	}
+}*/

@@ -3,17 +3,22 @@
     padding: 2em;
 }
 
+.gallery-staff-16-4 .gallery-staff-16-4-gallery{
+    margin: 0.5em;
+}
 
 .gallery-staff-16-4 .gallery-staff-16-4-gallery .gallery-staff-16-photo{
     padding: 1em;
     text-align: center;
+    overflow: hidden;
 }
 .gallery-staff-16-4 .gallery-staff-16-4-gallery .gallery-staff-16-photo img{
-    height: 100%;
-
+    height:100%; 
     transition: transform 1s;
+}
 
-
+.gallery-staff-16-4 .gallery-staff-16-4-gallery{
+    margin: 0.5em;
 }
 
 .gallery-staff-16-4 .gallery-staff-16-4-gallery  .gallery-staff-16-photo a p{
